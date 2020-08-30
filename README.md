@@ -217,3 +217,11 @@
 - 위 조건을 만족시켜주는 브라우저 API
   - pushState, replaceState 함수
   - popstate 이벤트
+
+### react-router-dom을 이용해서 SPA 만들어보기
+
+- spa2 폴더 참고하기
+- BrowserRouter 컴포넌트 안에서 Link와 Route를 사용
+  - Link는 클릭했을때 to에 적어놓은 링크로 url 이동
+  - Route는 해당하는 url에 맞게 컴포넌트를 출력
+
