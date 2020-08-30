@@ -123,8 +123,43 @@
 
 - polyfill
 
-  - npm run core-js 해서 다운받아 사용해야겟지만
+  - npm run core-js 해서 다운받아 사용 해야겠지만
   - cra에는 기본적으로 core-js가 내장되어 있기 때문에 import 만 해서 사용하면된다.
   - https://github.com/zloirock/core-js
 
-  
+- 환경변수
+
+  - `process.env.{변수 이름}`
+
+  - cra에서는 `process.env.NODE_ENV`라는 환경 변수를 갖고 있다.
+
+  - NODE_ENV는
+
+    - \`\`npm start\`\`로 실행하면 development
+    - \`\`npm test\`\`로 실행하면 test
+    - \`\`npm run build\`\`로 실행하면 production
+
+  - 환경변수를 커맨트라인에서 입력할 수도 있다.
+
+    - `REACT_APP_`로 시작해야 한다.
+    - `process.env.REACT_APP_API_URL`로 확인해보기
+    - window에서는 `set "REACT_APP_API_URL=api.myapp.com" && npm start`
+
+  - 환경변수가 많아지면 .env파일로 관리하는게 좋다.
+
+    - 루트폴더에서 환경변수 별로 파일을 관리할 수 있다.
+
+    - `.env.development` 파일을 만들어주고 환경변수를 입력해준다.
+
+    - npm start로 실행을 해서 
+
+      - ```js
+        console.log("process.env.REACT_APP_API_URL", process.env.REACT_APP_API_URL);
+        console.log("process.env.REACT_APP_TEMP1", process.env.REACT_APP_TEMP1);
+        ```
+
+        를 출력하면 .env.development의 환경변수가 출력되고
+
+    - npm build로 build를 해서 실행을 해보면
+
+      - 위와 같은 코드에서 .env.production의 환경변수가 출력된다.
