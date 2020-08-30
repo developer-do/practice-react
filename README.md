@@ -99,5 +99,32 @@
   - next.js
     - next.js에서는 바벨, 웹팩, eslint등의 설정을 변경할 수 있다.
 
+---
 
+# create-react-app으로 시작하기 2
 
+- npm start를 하게 되면 기본적으로 http로 시작된다.
+
+  - https로 시작을 하고 싶을때는
+    - `HTTPS=true npm start` 를 해주면 https로 실행이 된다.
+    - window에서는 `set HTTPS=true && npm start`라고 입력해야 한다.
+
+- npm build를 하게되면 /build폴더에 app.js로 부터 연관된 모든파일들이 빌드된다.
+
+- npm test를 하면 test.js파일을 테스트 한다.
+
+  - *.test.js 말고 *.spec.js파일도 테스트 파일로 인식한다.
+
+- npm eject를 하면 모든 설정 파일을 추출하는 명령어 이다.
+
+  - cra를 기반으로 직접 개발환경을 구축하고 싶을 때 사용함
+  - 추출을 하지 않으면 cra의 기능이 추가 됐을 때 단순히 react-scripts 버전만 올리면 되는데 추출을 하면 설정파일을 수정해야 한다는 단점이 있다.
+  - 꼭 필요한게 아니면 추출은 하지 않는게 좋다.
+
+- polyfill
+
+  - npm run core-js 해서 다운받아 사용해야겟지만
+  - cra에는 기본적으로 core-js가 내장되어 있기 때문에 import 만 해서 사용하면된다.
+  - https://github.com/zloirock/core-js
+
+  
