@@ -163,3 +163,11 @@
     - npm build로 build를 해서 실행을 해보면
 
       - 위와 같은 코드에서 .env.production의 환경변수가 출력된다.
+
+# CSS 작성 방법 결정하기
+
+- 일반적인 CSS 파일로 작성하기
+  - 이름 충돌할수 있는 문제가 있다.
+- css-module로 작성하기
+- Sass로 작성하기
+- css-in-js로 작성하기
