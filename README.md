@@ -167,7 +167,38 @@
 # CSS 작성 방법 결정하기
 
 - 일반적인 CSS 파일로 작성하기
+
   - 이름 충돌할수 있는 문제가 있다.
+
 - css-module로 작성하기
+
+  - 고유한 classname으로 충동을 막을수 있다.
+
+  - classname을 사용하기 번거로우므로 classnames라는 패키지를 설치
+
+    - `npm install classnames`
+
+    - `import cn from 'classnames'`를 import 시켜주고
+
+    - `cn(Style.box, Style.big)` 이런식으로 작성가능
+
+    - 다른 방식도 가능하다.
+
+    - ```js
+      const isBig = size === "big";
+        return (
+          <button
+            className={cn(Style.box, { [Style.big]: isBig, [Style.big]: !isBig })}
+          >
+            {isBig ? "큰 박스" : "작은 박스"}
+          </button>
+        );
+      ```
+
 - Sass로 작성하기
+
+  - `npm install node-sass` 
+  - node-sass라는 패키지를 설치해야 한다.
+  - 하지만 cra에는 내장되어 있기때문에 그대로 사용해도 된다.
+
 - css-in-js로 작성하기
